@@ -8,7 +8,7 @@ const get_request_options = (page, params, cnclToken) => ({
     params: { query: params.description, page: page.toString(), ...params },
     headers: {
         'x-rapidapi-host': 'job-search4.p.rapidapi.com',
-        'x-rapidapi-key': '0fc62a74dcmsh11146c05c4f52f9p129a16jsnae404d55df02'
+        'x-rapidapi-key': process.env.REACT_APP_API_KEY
     }
 })
 
