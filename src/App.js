@@ -10,8 +10,7 @@ function App() {
 
   const [params, setParams] = useState({ description: '' })
   const [page, setPage] = useState(1)
-  console.log('Callled paramss: ', params)
-  console.log('Callled Page: ', page)
+
   const { jobs, loading, error, hasNextPage } = useFetchJobs(params, page)
 
 

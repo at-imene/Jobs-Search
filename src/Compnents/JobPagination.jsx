@@ -6,7 +6,7 @@ export default function JobPagination({ page, setPage, hasNextPage }) {
     const handleChangePage = useCallback((amount) => {
         setPage(page => page + amount)
     }, [page])
-    console.log('PAGINATION HAS NEXT PAGE -------------------------', hasNextPage)
+
     return (
         <Pagination>
             {page !== 1 && <Pagination.Prev onClick={() => handleChangePage(-1)} />}

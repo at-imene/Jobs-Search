@@ -49,7 +49,7 @@ function useFetchJobs(params, page) {
 
         const cancelToken2 = axios.CancelToken.source()
         axios.request(get_request_options(page + 1, params, cancelToken2)).then(res => {
-            console.log('has seconde paggeeee')
+
             dispatch({ type: ACTIONS.HAS_NEXT_PAGE, playload: { hasNextPage: true } })
         }).catch(e => {
             if (axios.isCancel(e)) return
